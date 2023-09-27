@@ -90,7 +90,7 @@ export const {removeTaskAC,addTaskAC,updateTaskAC ,setTasksAC
 
 } = slice.actions
 
-
+// reducer for redux
 /*export const tasksReducer = (state: TasksStateType = initialState, action: ActionsType): TasksStateType => {
     switch (action.type) {
         case 'REMOVE-TASK':
@@ -125,7 +125,7 @@ export const {removeTaskAC,addTaskAC,updateTaskAC ,setTasksAC
 */
 
 
-// actions
+// actions for redux
 //export const removeTaskAC = (taskId: string, todolistId: string) => ({type: 'REMOVE-TASK', taskId, todolistId} as const)
 //export const addTaskAC = (task: TaskType) => ({type: 'ADD-TASK', task} as const)
 //export const updateTaskAC = (taskId: string, model: UpdateDomainTaskModelType, todolistId: string) => ({
@@ -220,6 +220,8 @@ export type UpdateDomainTaskModelType = {
 export type TasksStateType = {
     [key: string]: Array<TaskType>
 }
+
+//type for redux actions
 type ActionsType =
     | ReturnType<typeof removeTaskAC>
     | ReturnType<typeof addTaskAC>
